@@ -56,7 +56,7 @@ const roomSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-roomSchema.index({ roomId: 1 });
+// roomSchema.index({ roomId: 1 });
 roomSchema.index({ admin: 1 });
 roomSchema.index({ "participants.user": 1 });
 roomSchema.index({ isActive: 1, createdAt: -1 });
