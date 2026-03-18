@@ -54,7 +54,7 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-userSchema.index({ username: 1 });
+// userSchema.index({ username: 1 });
 userSchema.index({ isOnline: 1 });
 
 // Never expose passwordHash
