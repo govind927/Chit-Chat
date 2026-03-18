@@ -44,11 +44,7 @@ app.use(rateLimit({
 }));
 
 // Health check
-app.get("/health", (_, res) => res.json({
-  status: "ok",
-  uptime: process.uptime(),
-  timestamp: new Date().toISOString(),
-}));
+app.get("/health", (_, res) => res.send("OK"));
 
 app.get("/", (_, res) => res.send("Chit-Chat API running"));
 
